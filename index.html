@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Interviewing for Learners</title>
+
+	<style type="text/css" media="screen">
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			padding: 0;
+			margin: 0;
+			width: 100%;
+		}
+		.slide {
+			height: 100vh;
+			/* width: 98vw; */
+			margin: auto auto;
+			padding: 1vh 5vw;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			background-color: #333;
+		}
+		.slide h1,
+		.slide h2,
+		.slide h3,
+		.slide nav {
+			order: 0;
+			flex: 0 1 auto;
+			align-self: auto;
+			text-align: center;
+			color: #fff;
+		}
+		.slide h2,
+		.slide h3 {
+			margin-top: 0;
+		}
+		.slide main {
+			order: 0;
+			flex: 1 0 auto;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			align-self: auto;
+			vertical-align: middle;
+			display:flex;
+			align-items: center;
+			width: 40em;
+			padding: 1em 2em;
+			font-size: 2em;
+			line-height: 1.25em;
+			background-color: #fff;
+		}
+		#group-demo--add-value--problemsolving main,
+		#additional-references main {
+			font-size: 1.75em;
+			width: 46em;
+		}
+		main > * {
+			flex: 0 1 auto;
+			text-align: left;
+		}
+		.slide main, 
+		.slide main * {
+			color: #000;
+		}
+		main h2,
+		main h3,
+		main h4 {
+			margin: 0.25em 0;
+			padding-top: 0.5em;
+		}
+		main ol,
+		main ul {
+			margin: 0.25em 0;
+		}
+		main p {
+			margin: 0.4em 0 0.4em;
+		}
+		.columns.two {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: space-around;
+			align-items: flex-start;
+		}
+		.columns.two span {
+			order: 0;
+			flex: 1 1 auto;
+			align-self: flex-start;
+			justify-content: top;
+			margin: auto 0.5em;
+		}
+		.columns h4 {
+			margin-bottom: 0.25em;
+		}
+		.columns ul {
+			margin-top: 0.10em;
+		}
+		.citation {
+			font-size: 65%;
+			opacity: 0.75;
+		}
+		nav {
+			padding-bottom: 1.5em;
+		}
+		nav * {
+			color: #fff;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="slide title" id="title-page">
+		<h1>&nbsp;</h1>
+		<main>
+			<h1>Interviewing for Learners</h1>
+			<h3>Sean Duncan</h3>
+		</main>
+	</div>
+	
+	<div class="slide" id="intro">
+		<h1>Tonight</h1>
+		<main>
+			<ul>
+				<li>Close your computers</li>
+				<li>This page will be posted to the meetup page for reference.</li>
+				<li>Focused on Technical Interview questions</li>
+				<li>I recommend you review <a href="http://blog.penelopetrunk.com/2007/03/13/google-guy-ace-the-behavioural-interview/">Behavioral Interview Questions</a> on your own.</li>
+				<li>I'll be reading <em>and displaying</em> the questions.  If you're in a face-to-face or tele-interview environment, you will obviously need to pay significantly more attention when questions are asked.</li>
+			</ul>
+		</main>
+	</div>
+
+	<div class="slide" id="question-categories">
+		<h1>Categories</h1>
+		<main>
+			<ol style="font-size: 1.5em; line-height: 1.5em;">
+				<li>Conceptual</li>
+				<li>Technical</li>
+				<li>Problem Solving</li>
+			</ol>
+		</main>
+	</div>
+
+	<div class="slide" id="add-value">
+		<h1>Part One: <strong>Add Value</strong></h1>
+		<main style="
+			font-size: 2.25em;
+			width: 35em;">
+			<h3>Sean's 3Cs for Conceptual & Technical Questions</h3>
+			<ul>
+				<li>Clearly</li>
+				<li>Concisely</li>
+				<li>Correctly</li>
+			</ul>
+			<h3> </h3>
+			<h3>Problem Solving Guidance</h3>
+			<p>Answer via talk through. Provide conceptual and technical information, as appropriate.</p>
+		</main>
+	</div>
+
+	<div class="slide" id="group-demo--add-value--conceptual">
+		<h1>Add Value - Group Demo - Conceptual</h1>
+		<main>
+			<span class='question' style="font-size: 1.5em;">
+				<p>What is recursion?</p>
+			</span>
+		</main>
+	</div>
+
+	<div class="slide" id="group-demo--add-value--technical">
+		<h1>Add Value - Group Demo - Technical</h1>
+		<main>
+			<span class='question' style="font-size: 1.25em;">
+				<p>In mathematics, the factorial of a non-negative integer <code>n</code>, denoted by <code>n!</code>, is the product of all positive integers less
+				than or equal to <code>n</code>. For example,</p>
+				
+				<code>5! = 5 * 4 * 3 * 2 * 1 = 120.</code>
+				
+				<!-- <p>The value of 0! is 1.</p> -->
+				
+				<p>Using recursion, create a function <code>factorial</code> that receives <code>n</code> and returns <code>n!</code>.</p>
+
+				<p class='citation'>Based on: <a href="http://www.codewars.com/kata/recursion-number-1-factorial">CodeWars: Recursion #1 - Factorial</a></p>
+			</span>
+		</main>
+	</div>
+
+	<div class="slide" id="group-demo--add-value--problemsolving">
+		<h1>Add Value - Group Demo - Problem Solving</h1>
+		<main>
+			<span class='question'>
+				<p>There's a contagious infection making the rounds. It quickly becomes clear that there are two types of individuals:</p>
+				<div class='columns two'>
+					<span>
+						<h4>Type A: Susceptible (75-90% of the population)</h4>
+						<ul>
+							<li>Contract the infection.</li>
+							<li>Are sick for several weeks before returning to health.</li>
+							<li>Are contagious only while sick.</li>
+							<li>Can be reinfected.</li>
+						</ul>
+					</span>
+					<span>
+						<h4>Type B: Carriers (10-25% of the population)</h4>
+						<ul>
+							<li>Contract the infection.</li>
+							<li>Never get symptoms.</li>
+							<li>Are permanently contagious.</li>
+						</ul>
+					</span>
+				</div>
+				<p>Needless to say, this is causing a national workforce problem.</p>
+				<p>Thankfully, an immunization has been created.  Unfortunately, while it cures Type B people (i.e. they will no longer be carriers) it kills Type A people.</p>
+				<p>How would you identify the Type B people as quickly as possible?</p>
+				<p class='citation'>Based on <a href="https://stackoverflow.com/questions/105838/real-world-examples-of-recursion">the top answer for StackOverflow question: Real-World examples of recursion</a></p>
+			</span>
+		</main>
+	</div>
+	
+	<div class="slide" id="group-practice--add-value">
+		<h1>Part Two: <strong>Group Practice Adding Value</strong></h1>
+		<main>
+			<ul style="font-size: 1.25em; line-height: 1.25em;">
+				<li>If you <em>confidently know</em> the answer - let others answer first. 😉</li>
+				<li>If you <em>think you sorta kinda know</em> the answer - then volunteer to answer it!</li>
+			</ul>
+		</main>
+	</div>
+
+	<div class="slide" id="group-practice--add-value--conceptual">
+		<h1>Add Value - Group Practice - Conceptual</h1>
+		<main>
+			<span class='question' style="font-size: 1.5em;">
+				<p>What is the difference between <code>==</code> and <code>===</code>?</p>
+			</span>
+		</main>
+	</div>
+
+	<div class="slide" id="group-practice--add-value--technical">
+		<h1>Add Value - Group Practice - Technical</h1>
+		<main>
+			<span class='question' style="max-width: 95vw;">
+				<p>What will the result be for each of the following comparisons?</p>
+				<ol style="max-width: 95vw;">
+					<li><code>0 == "0"</code></li>
+					<li><code>"" == "0"</code></li>
+					<li><code>0 == ""</code></li>
+					<li><code>false == "0"</code></li>
+					<li><code>null == undefined</code></li>
+					<li><code>0 === "0"</code></li>
+					<li><code>" \t\r\n" == 0</code></li>
+					<li><code>[0] === [0]</code></li>
+					<li><code>{zero: 0} === {zero: 0}</code></li>
+				</ol>
+			</span>
+		</main>
+	</div>
+	
+	<div class="slide" id="group-practice--add-value--problemsolving">
+		<h1>Add Value - Group Practice - Problem Solving</h1>
+		<main>
+			<span class='question'>
+				<p>Given two arrays of objects, how would you go about returning an array of equivalent objects that appear in both arrays.</p>
+				<p>For example, given:</p>
+				<ul>
+					<li><pre>const groupA = [ { id: 12, name: 'Alice' },
+		 { id: 23, name: 'Bobby' },
+		 { id: 34, name: 'Charley'} ]</pre></li>
+					<li><pre>const groupB = [ { id: 23, name: 'Bobby' },
+		 { id: 45, name: 'Danny' },
+		 { id: 67, name: 'Freddy'} ]</pre></li>
+				</ul>
+				<p>You would need to return: <code>[{ id: 23, name: 'Bobby'}]</code></p>
+			</span>
+		</main>
+	</div>
+
+	<div class="slide" id="pair-practice--add-value">
+		<h1>Part Three: <strong>Pair Practice Adding Value</strong></h1>
+		<main>
+			<ul>
+				<li>Partner up with a neighbor.</li>
+				<li>Take turns:
+					<ul>
+						<li>asking one of the following questions and giving feedback on your partner's response</li>
+						<li>answering your partner's question</li>
+					</ul>
+				</li>
+			</ul>
+		</main>
+	</div>
+	
+	<div class="slide" id="pair-practice--all-categories">
+		<h1>Add Value - Pair Practice</h1>
+		<main>
+			<div class="columns two">
+				<span>
+					<ol>
+						<li>What is hoisting?</li>
+						<li>Give an example of a function that will be hoisted, and an example of a function that won't be hoisted.</li>
+						<li>
+							<p>The sort function is supposed to set the global variable to 1 when it has been executed at least once but it does not.</p>
+							<p>Can you figure out why?</p>
+							<p>You should not modify the behavior of the sort function.</p>
+						</li>
+					</ol>
+				</span>
+				<span style="max-width: 45vw;">
+					<pre style="font-size: 0.75em;">
+var sorted = 0;
+function sort(array) {
+   sorted = 1; 
+   for(var i = 0; i < array.length; i++) { 
+     array[i]=3 * array[i] + 2;
+   } 
+   var n=array.length, mid=Math.floor(n/2);
+   array=array.slice(0, mid).concat(array.slice(mid+1)); 
+   var sorted=false; 
+   for(var i=array.length - 1; i>= 0 && ! sorted; i--) {
+      sorted = true;
+      for(var j = 0; j < i; j++) { 
+         if ( array[j]> array[j+1] ) {
+            swap(array, j, j+1);
+            sorted = false;
+   }}}
+   return array;
+}
+					</pre>
+					<p class="citation">based on https://www.codewars.com/kata/hoisting/train/javascript</p>
+				</span>
+			</div>
+		</main>
+	</div>
+
+	<div class="slide" id="additional-references">
+		<h1>Additional References</h1>
+		<main>
+			<div class="columns two">
+				<span>
+					<h4>Conceptual</h4>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">Mozilla Developer Network's JavaScript
+								Guide</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a></li>
+					</ul>
+					<h4>Problem Solving</h4>
+					<ul>
+						<li><a href="https://www.interviewcake.com/javascript-interview-questions">Interview Cake</a></li>
+						<li><a href="http://codekata.com/">CodeKata (the <em>originator</em> of the Code Kata concept</a></li>
+						<li><a href="https://learning.mozilla.org/en-US/web-literacy/write/code/">Mozilla's Web Literacy projects</a></li>
+					</ul>
+				</span>
+				<span>
+					<h4>Technical</h4>
+					<ul>
+						<li><a href="https://www.freecodecamp.org/">FreeCodeCamp</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN's JavaScript Guide</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">MDN's JavaScript reference</a></li>
+						<li><a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS</a></li>
+						<li><a href="https://bonsaiden.github.io/JavaScript-Garden/">JavaScript Garden</a></li>
+					</ul>
+					<h4>Additional Resources</h4>
+					<ul>
+						<li><a href="https://30secondsofinterviews.org/">30 Seconds of Interview-</a></li>
+					</ul>
+				</span>
+			</div>
+		</main>
+	</div>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function (event) {
+			const slides = document.querySelectorAll('.slide')
+			const slidesArr = Array.from(slides)
+			const slideTops = slidesArr.map( (slide, i) => ({
+				top: posY(slide),
+				id: slides[i].id
+			}))
+			const slideTopsReversed = [...slideTops].reverse() // https://vincent.billey.me/pure-javascript-immutable-array/#reverse
+
+			const slideCount = slides.length - 1
+
+			function createLink (txt, id) {
+				const link = document.createElement('a')
+				link.textContent = txt
+				link.setAttribute('href', '#' + id);
+				return link
+			}
+
+			function createNavSection (index) {
+				const separator = document.createTextNode(' | ')
+				const previousId = index > 0 
+									? slides[index-1].id
+									: slides[slideCount].id
+				const linkBack = createLink('<< ', previousId)
+				const nextId = index < slideCount
+								? slides[index+1].id
+								: ''
+				const linkForward = createLink(' >>', nextId)
+				const nav = document.createElement('nav')
+
+				nav.appendChild(linkBack)
+				nav.appendChild(separator)
+				nav.appendChild(linkForward)
+				
+				return nav
+			}
+
+			slides.forEach( (slide, index) => {
+				const nav = createNavSection(index)
+				slide.appendChild(nav)
+			})
+
+			/* what's visible on the screen */
+			function posY(el) {
+				var test = el, top = 0;
+
+				while (!!test && test.tagName.toLowerCase() !== "body") {
+					top += test.offsetTop;
+					test = test.offsetParent;
+				}
+
+				return top;
+			}
+
+			function getCurrentTop() {
+				if (window.pageYOffset) { 
+					return window.pageYOffset;
+				}
+				return Math.max(document.documentElement.scrollTop, document.body.scrollTop);
+			}
+
+			function navigateNext () {
+				const currentTop = getCurrentTop()
+
+				const next = slideTops
+					.find( slideTop => slideTop.top > currentTop)
+
+				const nextId = next ? next.id : slideTops[0].id
+
+				location.hash = "#" + nextId;
+			}
+
+			function navigateBack() {
+				const currentTop = getCurrentTop()
+
+				const back = slideTopsReversed
+					.find(slideTop => slideTop.top < currentTop)
+
+				const backId = back ? back.id : slideTops[slideCount].id
+
+				location.hash = "#" + backId;
+			}
+
+			document.body.onkeydown = function (e) {
+				if (e.keyCode === 39) navigateNext()
+				else if (e.keyCode === 37) navigateBack()
+			};
+		})
+	</script>
+
+</body>
+</html>
+
+
+<!-- 
+	add value: recursion
+	practice: equality
+	learning: hoisting
+ -->
